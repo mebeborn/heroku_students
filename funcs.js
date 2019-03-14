@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const perfectInt = (n) => {
+function  perfectInt(n) {
   let sum=0;
   for(let i=1;i<n;i++) {
    if(n%i==0) sum+=i;
@@ -8,7 +8,7 @@ const perfectInt = (n) => {
   return sum==n;
 }
 
-const howMuch = (n) => {
+function howMuch(n) {
 let count = (n>0) ? 1 : 0;
 while( (n /= 10)  >= 1) {
   count++;
@@ -16,7 +16,7 @@ while( (n /= 10)  >= 1) {
 return count;
 }
 
-const howMuchSum = (n) => {
+function howMuchSum(n) {
 let sum = 0, tmp;
 while(n) {
   tmp = n % 10;
@@ -25,3 +25,9 @@ while(n) {
 }
 return sum;
 }
+
+module.exports = {
+  perfectInt,
+  howMuch,
+  howMuchSum
+};
